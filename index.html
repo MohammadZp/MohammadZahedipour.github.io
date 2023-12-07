@@ -1,290 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Mohammad Zahedipour</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-    .CTA {
-      position: relative;
-      width: 100%;
+    <title>Mohammad Zahedipour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+        .navbar {
+      background-color:#232425;
     }
 
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.8);
+        nav {
+            background-color: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        body {
+        padding-top: 56px; /* Adjust the value based on your navbar height */
     }
 
-    .CTA .ctaButton {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
+    /* #cta{
+        text-align: center;
+        background: rgba(217, 217, 217, 0.92);
+        height: 600px;
+    } */
+    .ctaHeader{
+        background: #51696E;
+        height: 400px;
+    }
+    .overlayImage{
+        width: 500px;
+        height: 500px;
+        border-radius: 800px;
+        position: absolute;
+        background: rgba(217, 217, 217, 217);
+        border-color:  rgba(217, 217, 217, 217);
+            z-index: 2;
+            right: 8%;
+            top: 10%;
+            display: flex;
+  align-items: center;
+  justify-content: center;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+    }
+
+    .imageOfCTA{
+        width: 90%;
+        border-radius: 800px;
+        height: 90%;
+    }
+    @media screen and (max-width: 480px) {
+        .imageOfCTA{
+        width: 90%;
+        border-radius: 9999px;
+        height: 90%;
+    }
+    .contactMeButton{
+        position: absolute;
+        border-radius: 100px;
+background: rgba(35, 36, 37, 0.69);
+width: 60%;
+top:130%;
+height: 60px;
+align-items: center;
+justify-content: center;
+            display: flex;
+    }
+    .overlayImage{
+        width: 400px;
+        height: 400px;
+        align-items: center;
+  justify-content: center;
+    }
+}
+
+
+.circle-container {
+  position: relative;
+  top: 40%;
+  width: 100%;
+  max-width: 300px; /* Adjust the max-width to your desired size */
+}
+
+.circle-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+    .contactMeButton{
+        position: absolute;
+        border-radius: 100px;
+background: rgba(35, 36, 37, 0.69);
+width: 60%;
+top:20%;
+height: 60px;
+align-items: center;
+justify-content: center;
+            display: flex;
+    }
+    .headerSentence{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #F0E7E7;
+        text-align: center;
+        font-family: Jomolhari;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        top:30%;
+    }
+
+    #cta .row {
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+  /* Additional styles for smaller screens */
+  .circle-container {
+    max-width: 200px;
+  }
+}
+
+
+.remove-gutters {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.remove-gutters [class^="col-"], .remove-gutters [class*=" col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.heroSectionTitle{
+  color: rgb(150, 161, 163); font-size: 60px; width: 100%; text-align: center;
+}
+
+
+/* Default styles */
+
+/* Styles for devices with a maximum width of 480px (e.g., smartphones) */
+@media screen and (max-width: 480px) {
+  .heroSectionTitle{
+    font-size: 30px;
+  }
+  /* Add your styles here */
+}
+
+/* Styles for devices with a minimum width of 481px and a maximum width of 768px (e.g., tablets) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .heroSectionTitle{
+    font-size: 30px;
+  }
+}
+
+/* Styles for devices with a minimum width of 769px and a maximum width of 1024px (e.g., small laptops) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .heroSectionTitle{
+    font-size: 30px;
+  }
+}
+
+/* Styles for devices with a minimum width of 1025px and a maximum width of 1200px (e.g., larger laptops) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .heroSectionTitle{
+    font-size: 30px;
+    margin-top: 30%;
+  }
+}
+
+/* Styles for devices with a minimum width of 1201px (e.g., desktops) */
+@media screen and (min-width: 1201px) {
+  .heroSectionTitle{
+    font-size: 40px;
+    margin-top: 30%;
+  }
+
+  .col-xxl-6 {
+   
+    width: 100%;
+
+}
+}
+
+#cta .container-fluid {
+  display: flex;
+  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers horizontally */
+}
+
+#cta .heroSectionTitle {
   text-align: center;
 }
-
-.container {
-    position: relative;
-	width: 100%;
-  }
-  img {
-     width: 100%;
-	 
-  }
-  .ctaButton{
-    border-radius: 15px;
-    background: linear-gradient(180deg, rgba(2, 2, 2, 0.00) 0%, #527081 80.73%);
-  }
-
-  .ctaButton{
-    border-radius: 15px;
-    background: linear-gradient(180deg, rgba(2, 2, 2, 0.00) 0%, #527081 80.73%);
-  margin-left:-20%;
-    margin-top:15%;
-    width: 50%;
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.custom-container {
+    margin-left: -15px;
+    margin-right: -15px;
   }
 
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  /* Add more styles as per your requirements */
+}
+
+.contact-text {
+  font-size: 16px;
+  color: #3b3b3b;
+  /* Add more styles as per your requirements */
+}
+.image-container {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+    </style>
+
+<script >
+  function gotoLink(link){
+   window.location.href=link
+  }
   
-  @media only screen and (min-width: 300) {
-    .ctaButton{
-      height:19%;
+  function openNewPage(link){
+    window.open(link, "_blank");
   }
-  .CTA .ctaButton {
-  font-size: 80%;
-  }
-}
-
-  @media only screen and (min-width: 600px) {
-    .ctaButton{
-      height:15%;
-  }
-  .CTA .ctaButton {
-  font-size: 100%;
-  }
-}
-
-.background-img {
-  opacity: 0.5; /* Adjust the opacity level as desired */
-}
-@media only screen and (min-width: 768px) {
-  .ctaButton{
-    height:15%;
-  }
-  .CTA .ctaButton {
-  font-size: 150%;
-  }
-}
-.logo-img {
-  height: 40px; /* Adjust the height as needed */
-  width: auto; /* This ensures the width scales proportionally */
-}
-
-.line {
-      height: 1px;
-      background-color: #ccc;
-      margin: 20px 0;
-    }
-#home {
-      background-image: url("home-background.jpg");
-      color: white; /* Set contrasting text color */
-      padding: 50px;
-    }
-    
-    .section {
-      padding: 50px;
-      margin-bottom: 30px; /* Add margin to create space between sections */
-      border-bottom: 1px solid #ccc; /* Optional: Add a border at the bottom of each section */
-    }
-    
-    #services {
-      background-color: #f2f2f2; /* Set a background color for services section */
-    }
-    
-    #resume {
-      background-color: #e6e6e6; /* Set a background color for resume section */
-    }
-  </style>
-  <script >
-function gotoLink(link){
- window.location.href=link
-}
-
-function openNewPage(link){
-  window.open(link, "_blank");
-}
-
-  </script>
+  
+    </script>
 </head>
-<body class="bg-light">
+<body style="background-color: rgb(215, 220, 225);"">
 
-<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#Home">Home</a>
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top"
+  style="background: linear-gradient(180deg, rgba(18.06, 5.42, 5.42, 0.39) 15%, rgba(18.06, 5.42, 5.42, 0) 100%), transparent;">
+ <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+     <span class="navbar-toggler-icon"></span>
+ </button>
+ <div class="collapse navbar-collapse" id="navbarResponsive">
+     <ul class="navbar-nav mx-auto justify-content-center">
+         <li class="nav-item mr-5 ">
+             <a class="nav-link" href="#Home" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 200; word-wrap: break-word">Home</a>
+         </li>
+         <li class="nav-item mr-5">
+             <a class="nav-link" href="#About" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 400; word-wrap: break-word">About</a>
+         </li>
+         <li class="nav-item mr-5">
+             <a class="nav-link" href="#Resume" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 400; word-wrap: break-word">Resume</a>
+         </li>
+         <li class="nav-item mr-5">
+          <a class="nav-link" href="#Projects" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 400; word-wrap: break-word">Projects</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#About">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Resume">Resume</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Services">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#Contact">Contact</a>
-      </li>
-    </ul>
-  </div>
+         <li class="nav-item mr-5">
+             <a class="nav-link" href="#Services" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 400; word-wrap: break-word">Services</a>
+         </li>
+         <li class="nav-item mr-5">
+             <a class="nav-link" href="#Contact" style="width: 120px; height: 25px; text-align: center;margin-left:35%; color: #131D1C; font-size: 20px; font-family: Jomolhari; font-weight: 400; word-wrap: break-word">Contact</a>
+         </li>
+     </ul>
+ </div>
 </nav>
 
+      <!-- <h3 class="py-3">
+        <span class="badge bg-dark d-xxl-inline d-none">xxl</span>
+        <span class="badge bg-dark d-xl-inline d-xxl-none d-none">xl</span>
+        <span class="badge bg-dark d-lg-inline d-xl-none d-none">lg</span>
+        <span class="badge bg-dark d-md-inline d-lg-none d-none">md</span>
+        <span class="badge bg-dark d-sm-inline d-md-none d-none">sm</span>
+        <span class="badge bg-dark d-inline d-sm-none">xs</span> &lt;-- current breakpoint
+    </h3> -->
+  
+    
+<section id="Home" style="width: 100%;"> 
+      <div class="container-fluid">
+      <div class="row remove-gutters">
+        <div class="col-lg-6 col-xxl-6 order-first col-sm-12 col-12 order-last order-sm-last" style="background-color: rgb(215, 220, 225); align-items: center; justify-content: center;">
+          <div style="align-items: center; justify-content: center;">
+            <p class="heroSectionTitle">Hi! I'm Mohammad.<br> I'm here to bring your <br> web development dreams <br> to life.</p>
+            <div class="button-container">
+              <button onclick="gotoLink('#Contact')" style="width: 80%; border-radius: 100px; height: 40px; background: linear-gradient(180deg, rgba(91, 113, 116, 0.00) 0%, rgba(29, 32, 33, 0.56) 0.01%, rgba(91, 113, 116, 0.56) 98.96%); color: white; border: none;">Contact me</button>
+            </div>
+          </div>
+        </div> 
+        <div class="col-lg-6 col-xxl-6 col-sm-12 col-12 order-lg-last"> 
+          <img src="mzlayout.png" style="width: 100%;">
+        </div>
+      </div> 
+    </div> 
+    </section>
 
-<section id="Home">
-  <div class="CTA ">
-    <img src="./Home.png" alt="img" style="width: 100%;">
-    <button class="ctaButton" onclick="gotoLink('#Contact')">Contact me </button>
-    </div>
 
-</section>
-<section id="About" class="bg white">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="text-justify">
-          <h2 class="section-heading text-uppercase">About Me</h2>
-          <p>
-            Greetings! I'm Mohammad, a passionate freelance web developer with a robust background in computer science and software engineering. I earned my master's degree from the University of Tarbiat Modares, where I immersed myself in the world of technology.
-          </p>
-          <p>
-            With over 3 years of hands-on experience, specializing in web development at Dotin, I bring expertise in Java, the Spring framework, and Hibernate for robust back-end solutions. On the front end, I choose ReactJS to infuse creativity and functionality into my web applications.
-          </p>
+    <section id="About" style="  margin-top: 10vh;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="text-justify">
+              <h2 class="title ">About Me</h2>
+              <p>
+                Greetings! I'm Mohammad, a passionate freelance web developer with a robust background in computer science and software engineering. I earned my master's degree from the University of Tarbiat Modares, where I immersed myself in the world of technology.
+              </p>
+              <p>
+                With over 3 years of hands-on experience, specializing in web development at Dotin, I bring expertise in Java, the Spring framework, and Hibernate for robust back-end solutions. On the front end, I choose ReactJS to infuse creativity and functionality into my web applications.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="text-justify">
+              <p>
+                In addition to my proficiency in web development, I've delved into the fascinating realms of machine learning and deep learning. My exploration of AI programming and computer vision using Python has equipped me with a versatile skill set, allowing me to bring innovative solutions to the table.
+              </p>
+              <p>
+                What truly sets me apart is not just my technical prowess but my genuine enthusiasm for creating impactful digital solutions. I believe in the power of collaboration and am excited about the prospect of working together on challenging projects. Whether you're looking to enhance your website or need a dedicated team member, I'm here to bring your vision to life.
+              </p>
+              <p>
+                Feel free to explore my portfolio and get in touch with any questions or project inquiries. Let's embark on a journey of innovation and create something extraordinary together!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-6">
-        <div class="text-justify">
-          <p>
-            In addition to my proficiency in web development, I've delved into the fascinating realms of machine learning and deep learning. My exploration of AI programming and computer vision using Python has equipped me with a versatile skill set, allowing me to bring innovative solutions to the table.
-          </p>
-          <p>
-            What truly sets me apart is not just my technical prowess but my genuine enthusiasm for creating impactful digital solutions. I believe in the power of collaboration and am excited about the prospect of working together on challenging projects. Whether you're looking to enhance your website or need a dedicated team member, I'm here to bring your vision to life.
-          </p>
-          <p>
-            Feel free to explore my portfolio and get in touch with any questions or project inquiries. Let's embark on a journey of innovation and create something extraordinary together!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="Resume" class="bg-light">
-  <div class="line"></div>
-  <div class="container">
-    <h2 class="section-heading text-uppercase">Resume</h2>
-    <div class="row">
-      <div class="col-lg-6">
-        <h4>Technical Skills</h4>
-        <h6>Back-end</h6>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Java </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">spring framework(core,boot,security,data) </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">API development </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">hibernate </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">mysql </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> oracle </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> plsql </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">design patterns</div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">data structure</div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">algorithms</div>
-        <h6>Front-end</h6>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">HTML </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">CSS</div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Bootstrap </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JavaScript </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> ReactJS </div>
-        <h6>Artificial intelligence</h6>
-       <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Machine learning </div>
-       <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Deep learning </div>
-       <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Python</div>
-       </div>
-       
-      <div class="col-lg-6">
-        <h4>Soft Skills</h4>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 80%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Communication </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Teamwork </div>
-        <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> Problem Solving </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="Services" class="bg-light">
-  <div class="line"></div>
-  <div class="container">
-    <h2 class="section-heading text-uppercase">Services</h2>
-    <div class="row">
-      <div class="col-lg-4 col-md-12">
-        <div class="service-item text-center">
-          <span class="icon">
-            <i class="fas fa-code"></i>
-          </span>
-          <h4 class="service-title">Web Development</h4>
-          <p class="service-description">I specialize in building robust and scalable web applications using Java Spring framework and modern front-end technologies like React.</p>
+       <section id="Resume" > 
+        <div class="container" style="  margin-top: 10vh;">
+          <h2 class="title ">Resume</h2>
+          <div class="row ">
+            <div class="col-lg-6">
+              <h4>Technical Skills</h4>
+              <h6>Back-end</h6>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Java </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">spring framework(core,boot,security,data) </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">API development </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">hibernate </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">mysql </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> oracle </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> plsql </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">design patterns</div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">data structure</div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">algorithms</div>
+              <h6>Front-end</h6>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">HTML </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">CSS</div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Bootstrap </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">JavaScript </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> ReactJS </div>
+              <h6>Artificial intelligence</h6>
+             <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Machine learning </div>
+             <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Deep learning </div>
+             <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 70%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Python</div>
+             <h6>Tools</h6>
+             <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Git </div>
+             </div>
+             
+          
+             
+            <div class="col-lg-6">
+              <h4>Soft Skills</h4>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 80%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Communication </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 100%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">Teamwork </div>
+              <div class="progress mb-2 progress-bar bg-info" role="progressbar" style="width: 90%; height: 20px;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"> Problem Solving </div>
+            </div>
+        
         </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <div class="service-item text-center">
-          <span class="icon">
-            <i class="fas fa-database"></i>
-          </span>
-          <h4 class="service-title">Database Design</h4>
-          <p class="service-description">I design efficient and optimized database structures to ensure smooth data storage and retrieval for your web applications.</p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-12">
-        <div class="service-item text-center">
-          <span class="icon">
-            <i class="fas fa-cogs"></i>
-          </span>
-          <h4 class="service-title">API Development</h4>
-          <p class="service-description">I create RESTful APIs using Java Spring framework to facilitate seamless communication between your web application and other systems or clients.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="line"></div>
-</section>
+      </section>
 
-<section id="Contact" class="bg-light">
-  <div class="container">
-    <div class="text-justify">
-      <h2 class="section-heading text-uppercase">Contact Me</h2>
-      <p>  You can contact me by sending a message on linkedin via email</p>
-    </div>
-    <div class="row">
+
+
+      <section id="Services" style="  margin-top: 10vh;">
+        <div class="line"></div>
+        <div class="container">
+          <h2 class="title ">Services</h2>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="service-item text-center">
+                <span class="icon">
+                  <i class="fas fa-code"></i>
+                </span>
+                <h4 class="service-title">Web Development</h4>
+                <p class="service-description">I specialize in building robust and scalable web applications using Java Spring framework and modern front-end technologies like React.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="service-item text-center">
+                <span class="icon">
+                  <i class="fas fa-database"></i>
+                </span>
+                <h4 class="service-title">Database Design</h4>
+                <p class="service-description">I design efficient and optimized database structures to ensure smooth data storage and retrieval for your web applications.</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="service-item text-center">
+                <span class="icon">
+                  <i class="fas fa-cogs"></i>
+                </span>
+                <h4 class="service-title">API Development</h4>
+                <p class="service-description">I create RESTful APIs using Java Spring framework to facilitate seamless communication between your web application and other systems or clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line"></div>
+      </section>
+      <section id="Projects" style="  margin-top: 10vh;">
+        <div class="line"></div>
+        <div class="container">
+          <h2 class="title ">Projects</h2>
+          <div class="row">
+            <p>
+            The most recent project I worked on involved developing a website for a restaurant.
+             This web application consists of several key sections, including authentication and authorization, user management, product management with admin authorization, and order management.
+              For the backend, I utilized Java, while the front-end was built using ReactJS. You can explore various sections of this project through the accompanying pictures below.
+            </p>
+
+            
+            </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-12">
+              <div class="service-item text-center">
+                <span class="icon">
+                  <i class="fas fa-code"></i>
+                </span>
+                <div class="image-container">
+                  <img src="signup.png" alt="Description of the image">
+                </div>
+                <p class="service-description">sign up with email verification</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+              <div class="service-item text-center">
+                <span class="icon">
+                  <i class="fas fa-database"></i>
+                </span>
+                <div class="image-container">
+                  <img src="login.png" alt="Description of the image">
+                </div>
+                <p class="service-description">user login</p></div> </div>
+                <div class="col-lg-4 col-md-12">
+                  <div class="service-item text-center">
+                    <span class="icon">
+                      <i class="fas fa-cogs"></i>
+                    </span>
+                    <div class="image-container">
+                      <img src="usermanagemenet.png" alt="Description of the image">
+                    </div>
+                    <p class="service-description">user management</p></div> </div>
+            </div>
+               
      
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <img src="./linkdln.png" alt="LinkedIn" style="width: 15%;" onclick="openNewPage('https://www.linkedin.com/in/mohammad-zahedipour-a320952a0/')"> Send a message on LinkedIn
-        <br>
-        <img src="./icons8-email-480.png" alt="Email" style="width: 15%;" onclick="gotoLink('mailto:mohammadzahedipour.freelance@gmail.com?&body=I%20just%20wanted%20to%20say%20hello!')"> Send an email to me
-        <br>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="row">
+              <div class="col-lg-4 col-md-12">
+                <div class="service-item text-center">
+                  <span class="icon">
+                    <i class="fas fa-code"></i>
+                  </span>
+                  <div class="image-container">
+                    <img src="product cart.png" alt="Description of the image">
+                  </div>
+                  <p class="service-description">product cart</p>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="service-item text-center">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <div class="image-container">
+                    <img src="hero section.png" alt="Description of the image">
+                  </div>
+                  <p class="service-description">Hero section of the website</p></div>
+              </div>
+              <div class="col-lg-4 col-md-12">
+                <div class="service-item text-center">
+                  <span class="icon">
+                    <i class="fas fa-cogs"></i>
+                  </span>
+                  <div class="image-container">
+                    <img src="addProduct.png" alt="Description of the image">
+                  </div>
+                  <p class="service-description">add and update products</p></div>
+              </div>
+
+
+          </div>
+        </div>
+        <div class="line"></div>
+      </section>
+
+      <section id="Contact" style="margin-top: 10vh; background: linear-gradient(180deg, rgba(80, 105, 108, 0.00) 0.52%, rgba(80, 105, 108, 0.88) 100%);">
+        <div class="container">
+          <div class="text-justify">
+            <h2 class="title ">Contact Me</h2>
+            <p>You can contact me by sending a message on LinkedIn, via email, or through Skype communication.</p>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center justify-content-center">
+              <img src="./icons8-email-480.png" alt="Email" style="width: 50px" onclick="gotoLink('mailto:mohammadzahedipour.freelance@gmail.com?&body=I%20just%20wanted%20to%20say%20hello!')">
+             
+              <span style="margin-bottom: 40px;" class="contact-text">Send an email to me</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center justify-content-center">
+              <img src="./linkdln.png" alt="LinkedIn" style="width: 50px" onclick="openNewPage('https://www.linkedin.com/in/mohammad-zahedipour-a320952a0/')"> 
+             
+              <span style="margin-bottom: 40px;" class="contact-text">Send a message on LinkedIn</span>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex flex-column align-items-center justify-content-center">
+              <img src="./skype.png" alt="Skype" style="width: 50px" onclick="openNewPage('https://join.skype.com/invite/odjVdnHotJGG')"> 
+            
+              <span style="margin-bottom: 40px;" class="contact-text">Send a message on Skype</span>
+            </div>
+          </div>
+        </div>
+      </section>
 </body>
 </html>
